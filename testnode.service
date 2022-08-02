@@ -1,0 +1,12 @@
+[Unit]
+Description=sample nodejs service
+After=network.target
+
+[Service]
+Type=simple
+User=ec2-user
+ExecStart=/usr/bin/node /home/ec2-user/projects/testnode/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
