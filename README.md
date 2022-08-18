@@ -44,6 +44,12 @@ curl -vvv http://<instance_ip>:8080
 ```
 
 ### Expected result:
+- In case of `AWS` ..
 ```
 {"message":"Welcome to sample node mysql restapi - from - <instance private dns name> - in - <AWS AZ name>"}
+```
+
+- In case of `GCP` ..
+```
+{"message":"Welcome to sample node mysql restapi - from - <vm name> - in - <GCP Zone name>"}
 ```
