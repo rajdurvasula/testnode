@@ -1,0 +1,12 @@
+[Unit]
+Description=sample nodejs service
+After=network.target
+
+[Service]
+Type=simple
+User=raj_durvasula
+ExecStart=/usr/bin/node /home/raj_durvasula/projects/testnode/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

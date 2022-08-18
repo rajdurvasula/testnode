@@ -2,14 +2,29 @@
 
 Simple NodeJS application with express module.
 
+## Cloud Instances
+- Can be deployed on AWS
+  - Use testnode.service from `aws` directory
+- Can be deployed on GCP
+  - Use testnode.service from `gcp` directory
+
 ## Setup
-- run these commands to setup node
-```
-yum -y update
-yum install -y gcc-c++ make git zip unzip
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
-yum -y install nodejs
-```
+- For Amazon Linux 2 Instance on `AWS`
+  - run these commands to setup node
+  ```
+  yum -y update
+  yum install -y gcc-c++ make git zip unzip
+  curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
+  yum -y install nodejs
+  ```
+
+- For Debian 11 Instance on `GCP`
+  ```
+  curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+  sudo apt update -y
+  sudo apt install nodejs -y
+  sudo apt install git -y
+  ```
 
 ## Create systemd service
 - As **root** user, copy *testnode.service* file to /etc/systemd/system/
